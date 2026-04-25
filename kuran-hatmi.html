@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kuran-i Kerim hatim sayfasi. 30 cuz ile duzenli hatim takibi, ilerleme goruntuleme ve cuz detaylari. Mukavelem ile kolay hatim yonetimi.">
+    <meta name="keywords" content="Kuran hatmi, 30 cuz, hatim takibi, cuzler, Kuran oku, mukavele">
+    <meta name="author" content="Mukavelem">
+    <meta name="robots" content="index, follow">
+    <title>Kuran-i Kerim Hatmi | 30 Cuz Takibi | Mukavelem</title>
+    <link rel="canonical" href="https://mukavelem.com/kuran-hatmi.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-spinner">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h2 class="loading-text">Mukavelem</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Mukavelem Ana Sayfa">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Mukavelem</span>
+                        <span class="logo-tagline">Hatim Platformu</span>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menuyu Ac/Kapat">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Ana Sayfa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mukavele-onemi.html" class="nav-link">
+                            <i class="fas fa-star"></i>
+                            <span>Mukavele Onemi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kuran-hatmi.html" class="nav-link active">
+                            <i class="fas fa-quran"></i>
+                            <span>Kuran Hatmi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="video-takip.html" class="nav-link">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Video Takip</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" id="hatmi">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li>/</li>
+                    <li>Kuran Hatmi</li>
+                </ol>
+            </nav>
+            <h1 class="page-title" data-animate="fade-in-up">Kuran-i Kerim <span class="highlight">Hatmi</span></h1>
+            <p class="page-subtitle" data-animate="fade-in-up" data-delay="200">
+                30 cuz ile duzenli hatim takibi. Her cuzu isaretleyin, ilerlemenizi gorun ve hatminizi tamamlayin.
+            </p>
+        </div>
+    </header>
+
+    <!-- Progress Section -->
+    <section class="hatmi-section" id="ilerleme">
+        <div class="container">
+            <div class="progress-overview" data-animate="fade-in-up">
+                <div class="progress-header">
+                    <h3><i class="fas fa-chart-pie"></i> Hatim Ilerlemeniz</h3>
+                    <div class="progress-stats">
+                        <div class="progress-stat">
+                            <span class="number" id="completedCount">0</span>
+                            <span class="label">Tamamlanan</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="number" id="remainingCount">30</span>
+                            <span class="label">Kalan</span>
+                        </div>
+                        <div class="progress-stat">
+                            <span class="number" id="percentageCount">0%</span>
+                            <span class="label">Tamamlanan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-large">
+                    <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                </div>
+                <div class="progress-info">
+                    <span>Hatim Durumu</span>
+                    <span id="progressText">0 / 30 Cuz</span>
+                </div>
+            </div>
+
+            <div class="cuzler-section" id="cuzler">
+                <h2 data-animate="fade-in"><i class="fas fa-list-ol"></i> 30 Cuz</h2>
+                <div class="cuzler-grid" id="cuzlerGrid">
+                    <!-- Cuz kartlari JavaScript ile olusturulacak -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-in">
+                <h2 class="cta-title">Hatim Yolculugunuza <span class="highlight">Devam Edin</span></h2>
+                <p class="cta-description">
+                    Video ile oklu takip sistemi sayesinde hatminizi daha kolay tamamlayabilirsiniz. 
+                    Profesyonel hafizlar esliginde Kur'an okuyun.
+                </p>
+                <div class="cta-buttons">
+                    <a href="video-takip.html" class="btn btn-white btn-lg">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Video ile Takip</span>
+                    </a>
+                    <a href="mukavele-onemi.html" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Mukavele Ogren</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <span>Mukavelem</span>
+                        </a>
+                        <p class="footer-description">
+                            Kur'an-i Kerim hatim platformu. 30 cuz ile kolay takip, 
+                            video destekli hatim sistemi ve kapsamli mukavele bilgileri.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Hizli Baglantilar</h4>
+                        <ul class="footer-menu">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                            <li><a href="mukavele-onemi.html"><i class="fas fa-chevron-right"></i> Mukavele Onemi</a></li>
+                            <li><a href="kuran-hatmi.html"><i class="fas fa-chevron-right"></i> Kuran Hatmi</a></li>
+                            <li><a href="video-takip.html"><i class="fas fa-chevron-right"></i> Video Takip</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Kuran Bilgileri</h4>
+                        <ul class="footer-menu">
+                            <li><a href="kuran-hatmi.html#cuzler"><i class="fas fa-chevron-right"></i> 30 Cuz</a></li>
+                            <li><a href="kuran-hatmi.html#sureler"><i class="fas fa-chevron-right"></i> 114 Sure</a></li>
+                            <li><a href="mukavele-onemi.html#fazilet"><i class="fas fa-chevron-right"></i> Mukavele Faziletleri</a></li>
+                            <li><a href="video-takip.html#hafizlar"><i class="fas fa-chevron-right"></i> Hafizlar</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4 class="footer-title">Iletisim</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@mukavelem.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Istanbul, Turkiye</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2024 <span>Mukavelem</span>. Tum Haklari Saklidir.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Gizlilik Politikasi</a>
+                        <a href="#">Kullanim Sartlari</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Yukari cik">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    
+    <!-- Cuz Detay Modal -->
+    <div id="cuzModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:999999; align-items:center; justify-content:center;">
+        <div style="background:white; border-radius:16px; max-width:500px; width:90%; max-height:80vh; overflow-y:auto; padding:2rem; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+            <button onclick="closeCuzModal()" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#666;">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 id="modalTitle" style="color:#1a5f4a; margin-bottom:1rem; padding-right:2rem;"></h2>
+            <div id="modalContent" style="color:#333;"></div>
+            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid #eee;">
+                <button id="modalCompleteBtn" class="btn btn-primary" style="width:100%; padding:1rem;">
+                    <i class="fas fa-check"></i> <span id="modalBtnText">Cuzu Tamamla</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Cuz verileri
+        const cuzData = [
+            { num: 1, sure: 'Fatiha - Bakara', sayfa: '1-21', sureler: ['Fatiha', 'Bakara (1-141)'] },
+            { num: 2, sure: 'Bakara', sayfa: '22-41', sureler: ['Bakara (142-252)'] },
+            { num: 3, sure: 'Bakara', sayfa: '42-61', sureler: ['Bakara (253-286)', 'Al-i Imran (1-91)'] },
+            { num: 4, sure: 'Al-i Imran', sayfa: '62-81', sureler: ['Al-i Imran (92-200)'] },
+            { num: 5, sure: 'Nisa', sayfa: '82-101', sureler: ['Nisa (1-87)'] },
+            { num: 6, sure: 'Nisa', sayfa: '102-121', sureler: ['Nisa (88-176)'] },
+            { num: 7, sure: 'Maide', sayfa: '122-141', sureler: ['Maide (1-81)'] },
+            { num: 8, sure: 'Maide - Enam', sayfa: '142-161', sureler: ['Maide (82-120)', 'Enam (1-110)'] },
+            { num: 9, sure: 'Enam - Araf', sayfa: '162-181', sureler: ['Enam (111-165)', 'Araf (1-87)'] },
+            { num: 10, sure: 'Araf', sayfa: '182-201', sureler: ['Araf (88-206)'] },
+            { num: 11, sure: 'Enfal - Tevbe', sayfa: '202-221', sureler: ['Enfal', 'Tevbe (1-92)'] },
+            { num: 12, sure: 'Tevbe - Yunus', sayfa: '222-241', sureler: ['Tevbe (93-129)', 'Yunus', 'Hud (1-5)'] },
+            { num: 13, sure: 'Hud - Yusuf', sayfa: '242-261', sureler: ['Hud (6-123)', 'Yusuf (1-52)'] },
+            { num: 14, sure: 'Yusuf - Ibrahim', sayfa: '262-281', sureler: ['Yusuf (53-111)', 'Rad', 'Ibrahim'] },
+            { num: 15, sure: 'Hicr - Nahl', sayfa: '282-301', sureler: ['Hicr', 'Nahl (1-128)'] },
+            { num: 16, sure: 'Isra - Kehf', sayfa: '302-321', sureler: ['Isra', 'Kehf (1-74)'] },
+            { num: 17, sure: 'Kehf - Taha', sayfa: '322-341', sureler: ['Kehf (75-110)', 'Meryem', 'Taha (1-135)'] },
+            { num: 18, sure: 'Enbiya - Hac', sayfa: '342-361', sureler: ['Enbiya', 'Hac'] },
+            { num: 19, sure: 'Muminun - Furkan', sayfa: '362-381', sureler: ['Muminun', 'Nur', 'Furkan (1-20)'] },
+            { num: 20, sure: 'Furkan - Neml', sayfa: '382-401', sureler: ['Furkan (21-77)', 'Suara', 'Neml (1-55)'] },
+            { num: 21, sure: 'Neml - Ankebut', sayfa: '402-421', sureler: ['Neml (56-93)', 'Kasas', 'Ankebut (1-45)'] },
+            { num: 22, sure: 'Ankebut - Lokman', sayfa: '422-441', sureler: ['Ankebut (46-69)', 'Rum', 'Lokman', 'Secde'] },
+            { num: 23, sure: 'Ahzab - Yasin', sayfa: '442-461', sureler: ['Ahzab', 'Sebe', 'Fatir', 'Yasin (1-27)'] },
+            { num: 24, sure: 'Yasin - Zumer', sayfa: '462-481', sureler: ['Yasin (28-83)', 'Saffat', 'Sad', 'Zumer (1-31)'] },
+            { num: 25, sure: 'Zumer - Fussilet', sayfa: '482-501', sureler: ['Zumer (32-75)', 'Mumin', 'Fussilet (1-46)'] },
+            { num: 26, sure: 'Fussilet - Ahkaf', sayfa: '502-521', sureler: ['Fussilet (47-54)', 'Sura', 'Zuhuruf', 'Duhan', 'Casiye', 'Ahkaf'] },
+            { num: 27, sure: 'Muhammed - Hadid', sayfa: '522-541', sureler: ['Muhammed', 'Fetih', 'Hucurat', 'Kaf', 'Zariyat', 'Tur', 'Necm', 'Kamer', 'Rahman', 'Vakia', 'Hadid'] },
+            { num: 28, sure: 'Mucadele - Tahrim', sayfa: '542-561', sureler: ['Mucadele', 'Hasr', 'Mumtahine', 'Saf', 'Cuma', 'Munafikun', 'Tegabun', 'Talak', 'Tahrim'] },
+            { num: 29, sure: 'Mulk - Fecr', sayfa: '562-581', sureler: ['Mulk', 'Kalem', 'Hakka', 'Mearic', 'Nuh', 'Cinn', 'Muzzemmil', 'Muddessir', 'Kiyame', 'Insan', 'Murselat', 'Nebe', 'Naziat', 'Abese', 'Tekvir', 'Infitar', 'Mutaffifin', 'Infitar', 'Buruc', 'Tarık', 'Ala', 'Gasiye', 'Fecr'] },
+            { num: 30, sure: 'Beled - Nas', sayfa: '582-604', sureler: ['Beled', 'Sems', 'Leyl', 'Duha', 'Insirah', 'Tin', 'Alak', 'Kadir', 'Beyyine', 'Zilzal', 'Adiyat', 'Karia', 'Tekasur', 'Asr', 'Humeze', 'Fil', 'Kureys', 'Maun', 'Kevser', 'Kafirun', 'Nasr', 'Tebbet', 'Ihlas', 'Felak', 'Nas'] }
+        ];
+
+        // LocalStorage'dan verileri al
+        function getProgress() {
+            try {
+                const data = localStorage.getItem('mukavelem_hatim');
+                return data ? JSON.parse(data) : { completed: [], current: 1 };
+            } catch {
+                return { completed: [], current: 1 };
+            }
+        }
+
+        // Verileri kaydet
+        function saveProgress(progress) {
+            try {
+                localStorage.setItem('mukavelem_hatim', JSON.stringify(progress));
+            } catch (e) {
+                console.warn('LocalStorage kullanilamiyor');
+            }
+        }
+
+        // Cuz gridini olustur
+        function renderCuzGrid() {
+            const grid = document.getElementById('cuzlerGrid');
+            const progress = getProgress();
+            
+            let html = '';
+            cuzData.forEach(cuz => {
+                const isCompleted = progress.completed.includes(cuz.num);
+                const isCurrent = progress.current === cuz.num;
+                
+                html += `
+                    <article class="cuzler-card ${isCompleted ? 'completed' : ''} ${isCurrent ? 'active' : ''}" 
+                             data-cuz="${cuz.num}" onclick="openCuzModal(${cuz.num})">
+                        <div class="cuzler-header">
+                            <span class="cuzler-number">${cuz.num}. Cuz</span>
+                            <span class="cuzler-status">
+                                ${isCompleted ? '<i class="fas fa-check"></i>' : ''}
+                            </span>
+                        </div>
+                        <div class="cuzler-info">
+                            <span class="sure">${cuz.sure}</span>
+                            <span class="sayfa">Sayfa: ${cuz.sayfa}</span>
+                        </div>
+                    </article>
+                `;
+            });
+            
+            grid.innerHTML = html;
+            updateProgress();
+        }
+
+        // Cuz detay modalini ac
+        function openCuzModal(cuzNum) {
+            const cuz = cuzData.find(c => c.num === cuzNum);
+            const progress = getProgress();
+            const isCompleted = progress.completed.includes(cuzNum);
+            
+            document.getElementById('modalTitle').innerHTML = `<i class="fas fa-book-open"></i> ${cuz.num}. Cuz Detaylari`;
+            
+            let surelerHtml = cuz.sureler.map(s => `<li style="padding:0.5rem 0; border-bottom:1px solid #eee;"><i class="fas fa-mosque" style="color:var(--primary-color); margin-right:0.5rem;"></i> ${s}</li>`).join('');
+            
+            document.getElementById('modalContent').innerHTML = `
+                <div style="margin-bottom:1rem;">
+                    <strong>Sayfa Araligi:</strong> ${cuz.sayfa}
+                </div>
+                <div style="margin-bottom:1rem;">
+                    <strong>Sureler:</strong>
+                    <ul style="list-style:none; margin-top:0.5rem;">
+                        ${surelerHtml}
+                    </ul>
+                </div>
+                <div style="background:var(--bg-accent); padding:1rem; border-radius:8px; margin-top:1rem;">
+                    <strong><i class="fas fa-info-circle"></i> Bilgi:</strong> 
+                    ${cuz.num}. cuz, Kur'an-i Kerim'in ${cuz.sayfa}. sayfalarini kapsar.
+                </div>
+            `;
+            
+            const btn = document.getElementById('modalCompleteBtn');
+            const btnText = document.getElementById('modalBtnText');
+            
+            if (isCompleted) {
+                btnText.textContent = 'Tamamlandi (Geri Al)';
+                btn.style.background = 'var(--gray-500)';
+            } else {
+                btnText.textContent = 'Cuzu Tamamla';
+                btn.style.background = 'var(--primary-color)';
+            }
+            
+            btn.onclick = function() {
+                toggleCuz(cuzNum);
+                closeCuzModal();
+            };
+            
+            document.getElementById('cuzModal').style.display = 'flex';
+        }
+        
+        // Cuz modalini kapat
+        function closeCuzModal() {
+            document.getElementById('cuzModal').style.display = 'none';
+        }
+        
+        // Cuz durumunu degistir
+        function toggleCuz(cuzNum) {
+            const progress = getProgress();
+            const index = progress.completed.indexOf(cuzNum);
+            
+            if (index > -1) {
+                progress.completed.splice(index, 1);
+            } else {
+                progress.completed.push(cuzNum);
+                progress.completed.sort((a, b) => a - b);
+            }
+            
+            // Bir sonraki cuzu guncelle
+            for (let i = 1; i <= 30; i++) {
+                if (!progress.completed.includes(i)) {
+                    progress.current = i;
+                    break;
+                }
+            }
+            
+            if (progress.completed.length === 30) {
+                progress.current = null;
+            }
+            
+            saveProgress(progress);
+            renderCuzGrid();
+        }
+
+        // Ilerlemeyi guncelle
+        function updateProgress() {
+            const progress = getProgress();
+            const completed = progress.completed.length;
+            const remaining = 30 - completed;
+            const percentage = Math.round((completed / 30) * 100);
+            
+            document.getElementById('completedCount').textContent = completed;
+            document.getElementById('remainingCount').textContent = remaining;
+            document.getElementById('percentageCount').textContent = percentage + '%';
+            document.getElementById('progressText').textContent = `${completed} / 30 Cuz`;
+            document.getElementById('progressBar').style.width = percentage + '%';
+            
+            // Hatim tamamlandi mi?
+            if (completed === 30) {
+                setTimeout(() => {
+                    alert('Tebrikler! Hatminizi tamamladiniz. Allah kabul etsin.');
+                }, 500);
+            }
+        }
+
+        // Sayfa yuklendiginde
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCuzGrid();
+            
+            // URL'den cuz parametresini al
+            const urlParams = new URLSearchParams(window.location.search);
+            const cuzParam = urlParams.get('cuz');
+            if (cuzParam) {
+                const cuzNum = parseInt(cuzParam);
+                if (cuzNum >= 1 && cuzNum <= 30) {
+                    setTimeout(() => {
+                        const card = document.querySelector(`[data-cuz="${cuzNum}"]`);
+                        if (card) {
+                            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            card.style.animation = 'pulse 1s';
+                        }
+                    }, 500);
+                }
+            }
+        });
+    </script>
+    <!-- Fallback: JS calismazsa loading ekranini gizle -->
+    <script>
+        setTimeout(function() {
+            var loading = document.getElementById('loadingScreen');
+            if (loading) {
+                loading.style.opacity = '0';
+                loading.style.visibility = 'hidden';
+                setTimeout(function() { loading.style.display = 'none'; }, 500);
+            }
+        }, 1500);
+    </script>
+</body>
+</html>

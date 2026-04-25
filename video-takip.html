@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video ile oklu takip sistemi. Profesyonel hafizlar esliginde Kuran-i Kerim okuma ve takip. Mukavelem ile kolay Kuran ogrenme.">
+    <meta name="keywords" content="video takip, oklu takip, Kuran video, hafiz, Kuran ogren, tecvid">
+    <meta name="author" content="Mukavelem">
+    <meta name="robots" content="index, follow">
+    <title>Video ile Oklu Takip | Mukavelem</title>
+    <link rel="canonical" href="https://mukavelem.com/video-takip.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-spinner">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h2 class="loading-text">Mukavelem</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Mukavelem Ana Sayfa">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Mukavelem</span>
+                        <span class="logo-tagline">Hatim Platformu</span>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menuyu Ac/Kapat">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Ana Sayfa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mukavele-onemi.html" class="nav-link">
+                            <i class="fas fa-star"></i>
+                            <span>Mukavele Onemi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kuran-hatmi.html" class="nav-link">
+                            <i class="fas fa-quran"></i>
+                            <span>Kuran Hatmi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="video-takip.html" class="nav-link active">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Video Takip</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" id="video">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li>/</li>
+                    <li>Video Takip</li>
+                </ol>
+            </nav>
+            <h1 class="page-title" data-animate="fade-in-up">Video ile <span class="highlight">Oklu Takip</span></h1>
+            <p class="page-subtitle" data-animate="fade-in-up" data-delay="200">
+                Profesyonel hafizlar esliginde Kuran-i Kerim okuyun. Oklu takip sistemi ile 
+                hangi ayette oldugunuzu kolayca gorun.
+            </p>
+        </div>
+    </header>
+
+    <!-- Video Player Section -->
+    <section class="video-player-section" id="oynat">
+        <div class="container">
+            <div class="video-player-container" data-animate="fade-in-up">
+                <div class="main-player">
+                    <iframe id="mainVideo" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&enablejsapi=1" 
+                            title="Kuran-i Kerim Hatim Videosu"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <!-- Bilgi Mesaji -->
+                <div id="videoInfo" style="background:#fff3cd; border:1px solid #ffc107; border-radius:8px; padding:1rem; margin-top:1rem;">
+                    <p style="margin:0 0 0.5rem 0; color:#856404;">
+                        <i class="fas fa-info-circle"></i> 
+                        <strong>Onemli:</strong> Videolari gormek icin:
+                    </p>
+                    <ol style="margin:0; padding-left:1.5rem; color:#856404;">
+                        <li>Sayfayi bir web sunucusunda acin (localhost veya hosting) - direkt dosya olarak acmayin</li>
+                        <li>Gercek YouTube video ID'leri ekleyin (su an ornek videolar var)</li>
+                    </ol>
+                </div>
+                
+                <!-- Video Yok Mesaji -->
+                <div id="videoError" style="display:none; background:#f8d7da; border:1px solid #f5c6cb; border-radius:8px; padding:1rem; margin-top:1rem; text-align:center;">
+                    <p style="margin:0; color:#721c24;">
+                        <i class="fas fa-exclamation-triangle"></i> 
+                        Video yuklenemedi. Lutfen internet baglantinizi kontrol edin.
+                    </p>
+                </div>
+            </div>
+
+            <div class="video-info-panel" data-animate="fade-in-up" data-delay="200">
+                <h2 id="videoTitle">Fatiha Suresi ve Bakara Suresi Baslangici</h2>
+                <p id="videoDescription">
+                    Bu videoda Fatiha Suresi'nin tamami ve Bakara Suresi'nin baslangic bolumu 
+                    okunmaktadir. Oklu takip sistemi sayesinde hangi ayette oldugunuzu kolayca 
+                    takip edebilirsiniz. Profesyonel hafiz tarafindan tecvid kurallarina uygun 
+                    olarak okunmustur.
+                </p>
+                <div class="video-meta">
+                    <div class="video-meta-item">
+                        <i class="fas fa-book-open"></i>
+                        <span id="videoCuz">1. Cuz</span>
+                    </div>
+                    <div class="video-meta-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span id="videoPages">Sayfa 1-21</span>
+                    </div>
+                    <div class="video-meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="videoDuration">45:30</span>
+                    </div>
+                    <div class="video-meta-item">
+                        <i class="fas fa-user"></i>
+                        <span id="videoHafiz">Mishary Rashid Alafasy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oklu Takip Sistemi -->
+            <div class="oklu-takip-container" data-animate="fade-in-up" data-delay="300">
+                <div class="oklu-takip-header">
+                    <h3><i class="fas fa-crosshairs"></i> Oklu Takip Sistemi</h3>
+                    <p>Videoyu takip ederken okudugunuz ayeti isaretleyin</p>
+                </div>
+                
+                <div class="ayet-display">
+                    <p class="ayet-arabic" id="ayetArabic">
+                        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                    </p>
+                    <p class="ayet-latin" id="ayetLatin">Bismillahirrahmanirrahim</p>
+                    <p class="ayet-meal" id="ayetMeal">Rahman ve Rahim olan Allah'in adiyla.</p>
+                </div>
+                
+                <div class="takip-controls">
+                    <button class="takip-btn prev" id="prevAyet" aria-label="Onceki ayet">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="ayet-counter" id="ayetCounter">1 / 7</span>
+                    <button class="takip-btn next" id="nextAyet" aria-label="Sonraki ayet">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video List Section -->
+    <section class="video-list-section" id="videolar">
+        <div class="container">
+            <h2 data-animate="fade-in"><i class="fas fa-list"></i> Tum Videolar</h2>
+            <div class="video-list" id="videoList">
+                <!-- Video kartlari JavaScript ile olusturulacak -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-in">
+                <h2 class="cta-title">Hatim Takibine <span class="highlight">Baslayin</span></h2>
+                <p class="cta-description">
+                    30 cuz ile duzenli hatim takibi yapin, her cuzu tamamlayinca isaretleyin 
+                    ve hatminizi tamamlayin.
+                </p>
+                <div class="cta-buttons">
+                    <a href="kuran-hatmi.html" class="btn btn-white btn-lg">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Hatime Basla</span>
+                    </a>
+                    <a href="mukavele-onemi.html" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Mukavele Ogren</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <span>Mukavelem</span>
+                        </a>
+                        <p class="footer-description">
+                            Kur'an-i Kerim hatim platformu. 30 cuz ile kolay takip, 
+                            video destekli hatim sistemi ve kapsamli mukavele bilgileri.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Hizli Baglantilar</h4>
+                        <ul class="footer-menu">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                            <li><a href="mukavele-onemi.html"><i class="fas fa-chevron-right"></i> Mukavele Onemi</a></li>
+                            <li><a href="kuran-hatmi.html"><i class="fas fa-chevron-right"></i> Kuran Hatmi</a></li>
+                            <li><a href="video-takip.html"><i class="fas fa-chevron-right"></i> Video Takip</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Kuran Bilgileri</h4>
+                        <ul class="footer-menu">
+                            <li><a href="kuran-hatmi.html#cuzler"><i class="fas fa-chevron-right"></i> 30 Cuz</a></li>
+                            <li><a href="kuran-hatmi.html#sureler"><i class="fas fa-chevron-right"></i> 114 Sure</a></li>
+                            <li><a href="mukavele-onemi.html#fazilet"><i class="fas fa-chevron-right"></i> Mukavele Faziletleri</a></li>
+                            <li><a href="video-takip.html#hafizlar"><i class="fas fa-chevron-right"></i> Hafizlar</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4 class="footer-title">Iletisim</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@mukavelem.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Istanbul, Turkiye</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2024 <span>Mukavelem</span>. Tum Haklari Saklidir.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Gizlilik Politikasi</a>
+                        <a href="#">Kullanim Sartlari</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Yukari cik">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    
+    <!-- Video Script -->
+    <script>
+        // Global degiskenler
+        var currentVideoIndex = 0;
+        var currentAyet = 0;
+        
+        // YouTube video yukleme hatasi kontrolu
+        function checkVideoLoad() {
+            var iframe = document.getElementById('mainVideo');
+            var errorDiv = document.getElementById('videoError');
+            
+            // 5 saniye sonra video yuklenmediyse hata goster
+            setTimeout(function() {
+                try {
+                    // iframe kontrolu
+                    if (iframe && iframe.contentDocument && iframe.contentDocument.body.innerHTML === '') {
+                        errorDiv.style.display = 'block';
+                    }
+                } catch(e) {
+                    // Cross-origin hatasi olabilir, bu normal
+                    console.log('Video yukleniyor...');
+                }
+            }, 5000);
+        }
+        
+        // Video verileri - Gercek YouTube ID'leri
+        // NOT: Bu ID'ler ornektir. Gercek video ID'leri icin YouTube'dan alinmalidir.
+        // Ornek format: https://www.youtube.com/watch?v=VIDEO_ID
+        const videos = [
+            {
+                id: 'dQw4w9WgXcQ',
+                title: '1. Cuz - Fatiha ve Bakara Suresi (ORNEK)',
+                cuz: 1,
+                pages: '1-21',
+                duration: '1:15:30',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1585036156171-384164a8c675?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            },
+            {
+                id: 'kJQP7kiw5Fk',
+                title: '2. Cuz - Bakara Devami (ORNEK)',
+                cuz: 2,
+                pages: '22-41',
+                duration: '1:10:15',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            },
+            {
+                id: 'JGwWNGJdvx8',
+                title: '3. Cuz - Bakara Sonu (ORNEK)',
+                cuz: 3,
+                pages: '42-61',
+                duration: '1:08:45',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            },
+            {
+                id: 'OPf0YbXqDm0',
+                title: '4. Cuz - Al-i Imran (ORNEK)',
+                cuz: 4,
+                pages: '62-81',
+                duration: '1:05:20',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1585036156171-384164a8c675?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            },
+            {   
+                id: 'CevxZvSJLk8',
+                title: '5. Cuz - Nisa Baslangic (ORNEK)',
+                cuz: 5,
+                pages: '82-101',
+                duration: '1:12:10',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            },
+            {
+                id: 'pRpeEdMmmQ0',
+                title: '6. Cuz - Nisa Sonu (ORNEK)',
+                cuz: 6,
+                pages: '102-121',
+                duration: '1:09:30',
+                hafiz: 'Mishary Rashid Alafasy',
+                thumbnail: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=400&h=225&fit=crop',
+                description: 'BU ORNEK VIDEOdur. Gercek Kuran videosu icin YouTube ID degistirilmelidir.'
+            }
+        ];
+
+        // Fatiha ayetleri
+        const ayetler = [
+            { arabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ', latin: 'Bismillahirrahmanirrahim', meal: 'Rahman ve Rahim olan Allah\'in adiyla.' },
+            { arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', latin: 'Elhamdulillahi Rabbilalemin', meal: 'Hamd alemlerin Rabbi Allah\'a mahsustur.' },
+            { arabic: 'الرَّحْمَنِ الرَّحِيمِ', latin: 'Errahmanirrahim', meal: 'Rahman\'dir, Rahim\'dir O.' },
+            { arabic: 'مَالِكِ يَوْمِ الدِّينِ', latin: 'Maliki yevmiddin', meal: 'Din gununun maliki O\'dur.' },
+            { arabic: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ', latin: 'Iyyake na\'budu ve iyyake neste\'in', meal: 'Yalniz sana ibadet ederiz ve yalniz senden yardim dileriz.' },
+            { arabic: 'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ', latin: 'Ihdinessiratelmustakim', meal: 'Bizi dogru yola ilet.' },
+            { arabic: 'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ', latin: 'Siratellezine en\'amte aleyhim gayril magdubi aleyhim ve leddallin', meal: 'Kendilerine nimet verdiginin yoluna, gazaba ugrayanlarin ve sapiklarinkine degil.' }
+        ];
+
+        // Video listesini olustur
+        function renderVideoList() {
+            const list = document.getElementById('videoList');
+            let html = '';
+            
+            videos.forEach((video, index) => {
+                html += `
+                    <article class="video-list-card ${index === 0 ? 'active' : ''}" 
+                             data-index="${index}" onclick="loadVideo(${index})">
+                        <div class="video-list-thumbnail">
+                            <img src="${video.thumbnail}" alt="${video.title}" loading="lazy">
+                            <div class="video-list-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-list-duration">${video.duration}</div>
+                        </div>
+                        <div class="video-list-info">
+                            <h4>${video.title}</h4>
+                            <p>${video.cuz}. Cuz - ${video.pages}</p>
+                        </div>
+                    </article>
+                `;
+            });
+            
+            list.innerHTML = html;
+        }
+
+        // Video yukle
+        function loadVideo(index) {
+            currentVideoIndex = index;
+            const video = videos[index];
+            
+            // Video bilgilerini guncelle
+            document.getElementById('mainVideo').src = `https://www.youtube.com/embed/${video.id}`;
+            document.getElementById('videoTitle').textContent = video.title;
+            document.getElementById('videoDescription').textContent = video.description;
+            document.getElementById('videoCuz').textContent = video.cuz + '. Cuz';
+            document.getElementById('videoPages').textContent = 'Sayfa ' + video.pages;
+            document.getElementById('videoDuration').textContent = video.duration;
+            document.getElementById('videoHafiz').textContent = video.hafiz;
+            
+            // Aktif karti guncelle
+            document.querySelectorAll('.video-list-card').forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+            
+            // Sayfayi video player'a kaydir
+            document.getElementById('oynat').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Ayet guncelle
+        function updateAyet(index) {
+            const ayet = ayetler[index];
+            
+            document.getElementById('ayetArabic').style.opacity = '0';
+            document.getElementById('ayetLatin').style.opacity = '0';
+            document.getElementById('ayetMeal').style.opacity = '0';
+            
+            setTimeout(() => {
+                document.getElementById('ayetArabic').innerHTML = `<span class="highlight">${ayet.arabic}</span>`;
+                document.getElementById('ayetLatin').textContent = ayet.latin;
+                document.getElementById('ayetMeal').textContent = ayet.meal;
+                document.getElementById('ayetCounter').textContent = `${index + 1} / ${ayetler.length}`;
+                
+                document.getElementById('prevAyet').disabled = index === 0;
+                document.getElementById('nextAyet').disabled = index === ayetler.length - 1;
+                
+                document.getElementById('ayetArabic').style.opacity = '1';
+                document.getElementById('ayetLatin').style.opacity = '1';
+                document.getElementById('ayetMeal').style.opacity = '1';
+            }, 200);
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            renderVideoList();
+            updateAyet(0);
+            checkVideoLoad();
+            
+            document.getElementById('prevAyet').addEventListener('click', function() {
+                if (currentAyet > 0) {
+                    currentAyet--;
+                    updateAyet(currentAyet);
+                }
+            });
+            
+            document.getElementById('nextAyet').addEventListener('click', function() {
+                if (currentAyet < ayetler.length - 1) {
+                    currentAyet++;
+                    updateAyet(currentAyet);
+                }
+            });
+        });
+    </script>
+    <!-- Fallback: JS calismazsa loading ekranini gizle -->
+    <script>
+        setTimeout(function() {
+            var loading = document.getElementById('loadingScreen');
+            if (loading) {
+                loading.style.opacity = '0';
+                loading.style.visibility = 'hidden';
+                setTimeout(function() { loading.style.display = 'none'; }, 500);
+            }
+        }, 1500);
+    </script>
+</body>
+</html>

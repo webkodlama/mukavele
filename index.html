@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mukavelem - Kur'an-ı Kerim hatim platformu. 30 cüz ile kolay takip, video destekli hatim sistemi. Mukavele önemi ve faziletleri.">
+    <meta name="keywords" content="mukavele, Kur'an hatmi, hatim, cüz, Kur'an oku, İslami platform, online hatim">
+    <meta name="author" content="Mukavelem">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mukavelem - Kur'an-ı Kerim Hatim Platformu">
+    <meta property="og:description" content="30 cüz ile kolay hatim takibi, video destekli Kur'an okuma platformu">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mukavelem.com">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <title>Mukavelem - Kur'an-ı Kerim Hatim Platformu | Online Hatim Takibi</title>
+    <link rel="canonical" href="https://mukavelem.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="logo-spinner">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h2 class="loading-text">Mukavelem</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Mukavelem Ana Sayfa">
+                    <div class="logo-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Mukavelem</span>
+                        <span class="logo-tagline">Hatim Platformu</span>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç/Kapat">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Ana Sayfa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mukavele-onemi.html" class="nav-link">
+                            <i class="fas fa-star"></i>
+                            <span>Mukavele Önemi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="kuran-hatmi.html" class="nav-link">
+                            <i class="fas fa-quran"></i>
+                            <span>Kur'an Hatmi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="video-takip.html" class="nav-link">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Video Takip</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-in-up">
+                    <i class="fas fa-mosque"></i>
+                    <span>Kur'an-ı Kerim Hatim Platformu</span>
+                </div>
+                <h1 class="hero-title" data-animate="fade-in-up" data-delay="200">
+                    <span class="highlight">Mukavelem</span> ile<br>
+                    Hatimlerinizi Kolayca Takip Edin
+                </h1>
+                <p class="hero-description" data-animate="fade-in-up" data-delay="400">
+                    30 cüz ile düzenli hatim takibi, video destekli okuma sistemi ve 
+                    mukavele önemi hakkında kapsamlı bilgiler. Modern ve kullanıcı dostu arayüzle 
+                    Kur'an-ı Kerim hatimlerinizi organize edin.
+                </p>
+                <div class="hero-buttons" data-animate="fade-in-up" data-delay="600">
+                    <a href="kuran-hatmi.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Hatime Başla</span>
+                    </a>
+                    <a href="mukavele-onemi.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Mukavele Öğren</span>
+                    </a>
+                </div>
+                <div class="hero-stats" data-animate="fade-in-up" data-delay="800">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-label">Cüz</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="114">0</span>
+                        <span class="stat-label">Sure</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6236">0</span>
+                        <span class="stat-label">Ayet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#features" class="scroll-indicator" aria-label="Aşağı kaydır">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Keşfet</span>
+            </a>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-sparkles"></i>
+                    Özelliklerimiz
+                </span>
+                <h2 class="section-title">Neden <span class="highlight">Mukavelem</span>?</h2>
+                <p class="section-description">
+                    Modern teknoloji ile geleneksel hatim kültürünü birleştirerek 
+                    en iyi Kur'an-ı Kerim takip deneyimini sunuyoruz.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <article class="feature-card" data-animate="fade-in-up" data-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-quran"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">30 Cüz Takip</h3>
+                    <p class="feature-description">
+                        Tüm cüzleri düzenli şekilde takip edin. Her cüzün okunma durumunu 
+                        işaretleyin ve ilerlemenizi görün.
+                    </p>
+                    <a href="kuran-hatmi.html" class="feature-link">
+                        <span>Detayları Gör</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+                
+                <article class="feature-card" data-animate="fade-in-up" data-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">Video Destekli Takip</h3>
+                    <p class="feature-description">
+                        Video ile oklu takip sistemi sayesinde hangi ayette olduğunuzu 
+                        kolayca görün ve takip edin.
+                    </p>
+                    <a href="video-takip.html" class="feature-link">
+                        <span>Videoları İzle</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+                
+                <article class="feature-card" data-animate="fade-in-up" data-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">Mukavele Önemi</h3>
+                    <p class="feature-description">
+                        Mukavelenin dini ve manevi önemi hakkında detaylı bilgiler 
+                        ve faziletleri öğrenin.
+                    </p>
+                    <a href="mukavele-onemi.html" class="feature-link">
+                        <span>Daha Fazla Bilgi</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+                
+                <article class="feature-card" data-animate="fade-in-up" data-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">Mobil Uyumlu</h3>
+                    <p class="feature-description">
+                        Tüm cihazlarda sorunsuz çalışan responsive tasarım. 
+                        Telefon, tablet ve bilgisayarda kolay kullanım.
+                    </p>
+                    <span class="feature-badge">
+                        <i class="fas fa-check-circle"></i>
+                        Her Cihazda Çalışır
+                    </span>
+                </article>
+                
+                <article class="feature-card" data-animate="fade-in-up" data-delay="500">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">İlerleme Takibi</h3>
+                    <p class="feature-description">
+                        Hatim ilerlemenizi grafiklerle görün. Günlük, haftalık ve 
+                        aylık okuma istatistiklerinizi takip edin.
+                    </p>
+                    <span class="feature-badge">
+                        <i class="fas fa-chart-pie"></i>
+                        Detaylı Raporlar
+                    </span>
+                </article>
+                
+                <article class="feature-card" data-animate="fade-in-up" data-delay="600">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-icon-bg"></div>
+                    </div>
+                    <h3 class="feature-title">Toplu Hatim</h3>
+                    <p class="feature-description">
+                        Aileniz ve arkadaşlarınızla birlikte toplu hatim yapın. 
+                        Herkes kendi cüzünü seçsin ve tamamlansın.
+                    </p>
+                    <span class="feature-badge">
+                        <i class="fas fa-heart"></i>
+                        Beraberce Daha Güzel
+                    </span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cüzler Preview Section -->
+    <section class="cuz-preview" id="cuzler">
+        <div class="container">
+            <div class="section-header light" data-animate="fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-list-ol"></i>
+                    30 Cüz
+                </span>
+                <h2 class="section-title">Kur'an-ı Kerim <span class="highlight">Cüzleri</span></h2>
+                <p class="section-description">
+                    30 cüzün tamamı düzenli şekilde listelenmiştir. 
+                    Her cüze tıklayarak detaylı bilgilere ulaşabilirsiniz.
+                </p>
+            </div>
+            
+            <div class="cuz-grid" id="cuzGrid">
+                <!-- Cüz kartları JavaScript ile oluşturulacak -->
+            </div>
+            
+            <div class="cuz-cta" data-animate="fade-in-up">
+                <a href="kuran-hatmi.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-book-open"></i>
+                    <span>Tüm Cüzleri Gör</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="video-grid">
+                <div class="video-content" data-animate="fade-in-right">
+                    <span class="section-badge">
+                        <i class="fas fa-video"></i>
+                        Video Takip
+                    </span>
+                    <h2 class="section-title">Video ile <span class="highlight">Oklu Takip</span></h2>
+                    <p class="video-description">
+                        Kur'an-ı Kerim okurken videoyu takip ederek hangi ayette olduğunuzu 
+                        kolayca görün. Oklu takip sistemi sayesinde okumanızı hiç kaybetmeyin.
+                    </p>
+                    <ul class="video-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Profesyonel hafızlar tarafından kaydedilmiş videolar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Anlık oklu takip sistemi</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Yavaş ve normal okuma hızı seçenekleri</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tecvid kurallarına uygun okuma</span>
+                        </li>
+                    </ul>
+                    <a href="video-takip.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        <span>Videoları İzle</span>
+                    </a>
+                </div>
+                <div class="video-preview" data-animate="fade-in-left">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?w=600&h=400&fit=crop" 
+                                 alt="Kur'an-ı Kerim Video Takip" loading="lazy">
+                            <div class="video-overlay">
+                                <button class="play-btn" aria-label="Videoyu Oynat">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="video-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>45:30</span>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Fatiha Suresi ve Bakara Suresi Başlangıcı</h4>
+                            <p>1. Cüz - Sayfa 1-21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mukavele Importance Section -->
+    <section class="mukavele-section" id="mukavele">
+        <div class="container">
+            <div class="mukavele-grid">
+                <div class="mukavele-image" data-animate="fade-in-right">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&h=700&fit=crop" 
+                             alt="Mukavele" loading="lazy">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+                <div class="mukavele-content" data-animate="fade-in-left">
+                    <span class="section-badge">
+                        <i class="fas fa-star"></i>
+                        Mukavele Önemi
+                    </span>
+                    <h2 class="section-title">Mukavelenin <span class="highlight">Manevi Değeri</span></h2>
+                    <p class="mukavele-description">
+                        Mukavele, Kur'an-ı Kerim'in tamamını hatmetme işlemidir. 
+                        Bu kutlu amaç, Müslümanlar için büyük önem taşır. 
+                        Mukavele yapmanın faziletleri ve önemi hakkında detaylı bilgiler.
+                    </p>
+                    <div class="mukavele-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-pray"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Manevi Huzur</h4>
+                                <p>Kur'an okumak kalbi huzura kavuşturur</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Büyük Sevap</h4>
+                                <p>Her harf için ayrı sevap vardır</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>İlim Artışı</h4>
+                                <p>Kur'an ilimlerini öğrenme fırsatı</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="mukavele-onemi.html" class="btn btn-outline">
+                        <span>Devamını Oku</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-animate="fade-in-up" data-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Tamamlanan Hatim</span>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-in-up" data-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="1000">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Kullanıcı</span>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-in-up" data-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="114">0</span>
+                        <span class="stat-label">Video İçerik</span>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-in-up" data-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="5000">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Dua ve İlham</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-in">
+                <h2 class="cta-title">Hatim Yolculuğunuza <span class="highlight">Bugün Başlayın</span></h2>
+                <p class="cta-description">
+                    Mukavelem ile Kur'an-ı Kerim hatimlerinizi düzenli takip edin, 
+                    manevi yolculuğunuzu en iyi şekilde değerlendirin.
+                </p>
+                <div class="cta-buttons">
+                    <a href="kuran-hatmi.html" class="btn btn-white btn-lg">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Hatime Başla</span>
+                    </a>
+                    <a href="mukavele-onemi.html" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Daha Fazla Bilgi</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <span>Mukavelem</span>
+                        </a>
+                        <p class="footer-description">
+                            Kur'an-ı Kerim hatim platformu. 30 cüz ile kolay takip, 
+                            video destekli hatim sistemi ve kapsamlı mukavele bilgileri.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Hızlı Bağlantılar</h4>
+                        <ul class="footer-menu">
+                            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                            <li><a href="mukavele-onemi.html"><i class="fas fa-chevron-right"></i> Mukavele Önemi</a></li>
+                            <li><a href="kuran-hatmi.html"><i class="fas fa-chevron-right"></i> Kur'an Hatmi</a></li>
+                            <li><a href="video-takip.html"><i class="fas fa-chevron-right"></i> Video Takip</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4 class="footer-title">Kur'an Bilgileri</h4>
+                        <ul class="footer-menu">
+                            <li><a href="kuran-hatmi.html#cuzler"><i class="fas fa-chevron-right"></i> 30 Cüz</a></li>
+                            <li><a href="kuran-hatmi.html#sureler"><i class="fas fa-chevron-right"></i> 114 Sure</a></li>
+                            <li><a href="mukavele-onemi.html#fazilet"><i class="fas fa-chevron-right"></i> Mukavele Faziletleri</a></li>
+                            <li><a href="video-takip.html#hafizlar"><i class="fas fa-chevron-right"></i> Hafızlar</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4 class="footer-title">İletişim</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@mukavelem.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>İstanbul, Türkiye</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2024 <span>Mukavelem</span>. Tüm Hakları Saklıdır.
+                    </p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Kullanım Şartları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Yukarı çık">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <!-- Fallback: JS calismazsa loading ekranini gizle -->
+    <script>
+        setTimeout(function() {
+            var loading = document.getElementById('loadingScreen');
+            if (loading) {
+                loading.style.opacity = '0';
+                loading.style.visibility = 'hidden';
+                setTimeout(function() { loading.style.display = 'none'; }, 500);
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
